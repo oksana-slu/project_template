@@ -2,6 +2,8 @@ from django.conf.urls import patterns, include, url
 from django.conf import settings
 from django.contrib import admin
 
+from filebrowser.sites import site
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -18,7 +20,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^uploadify/', include('uploadify.urls')),
-    url(r'^tinymce/filebrowser/', include('filebrowser.urls')),
+    url(r'^tinymce/filebrowser/', include(site.urls)),
     url(r'^tinymce/', include('tinymce.urls')),
 )
 
