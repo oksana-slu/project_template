@@ -1,5 +1,5 @@
 pil
-django==1.4
+django==1.4.3
 south==0.7.4
 
 -e git+https://github.com/krvss/django-social-auth.git#egg=django-social-auth
